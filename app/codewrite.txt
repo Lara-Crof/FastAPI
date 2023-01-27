@@ -1,0 +1,11 @@
+  environment:
+      POSTGRES_PASS: password
+      POSTGRESS_USER: admin
+
+
+  fastapi:
+    build: .
+    ports:
+    - "8000:8000"
+    depends_on:
+      - db_auth
